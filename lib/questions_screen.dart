@@ -20,14 +20,13 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   int index = 0;
 
   void checkAnswer(answer) {
+    widget.onSelectAnswer(answer);
     if (index >= questions.length - 1) {
       return;
     }
-    widget.onSelectAnswer(answer);
     setState(() {
       index++;
     });
-
   }
 
   @override
