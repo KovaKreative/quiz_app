@@ -31,7 +31,9 @@ class _QuizState extends State<Quiz> {
 
   void restartQuiz() {
     selectedAnswers.clear();
-    pageIndex = 0;
+    setState(() {
+      pageIndex = 0;
+    });
   }
 
   void storeAnswer(String answer) {
