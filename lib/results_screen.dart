@@ -28,48 +28,52 @@ class ResultsScreen extends StatelessWidget {
 
       renderedResults.add(Container(
         margin: EdgeInsets.symmetric(vertical: 20, horizontal: 0),
-        child: Column(
-          children: [
-            Text(
-              '${i + 1}: ${questions[i].text}',
-              style: question,
-              textAlign: TextAlign.center,
-            ),
-            correctAnswer
-                ? Text('Correct!', style: correct)
-                : Text('Incorrect...', style: incorrect),
-            if (!correctAnswer)
-              Text('Correct answer: ${questions[i].answers[0]}',
-                  textAlign: TextAlign.center, style: correct),
-            Text('Your answer: ${selectedAnswers[i]}',
+        child: SizedBox(
+          child: Column(
+            children: [
+              Text(
+                '${i + 1}: ${questions[i].text}',
+                style: question,
                 textAlign: TextAlign.center,
-                style: correctAnswer ? correct : incorrect),
-          ],
+              ),
+              correctAnswer
+                  ? Text('Correct!', style: correct)
+                  : Text('Incorrect...', style: incorrect),
+              if (!correctAnswer)
+                Text('Correct answer: ${questions[i].answers[0]}',
+                    textAlign: TextAlign.center, style: correct),
+              Text('Your answer: ${selectedAnswers[i]}',
+                  textAlign: TextAlign.center,
+                  style: correctAnswer ? correct : incorrect),
+            ],
+          ),
         ),
       ));
     }
 
     return Container(
       margin: EdgeInsets.all(40),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            'RESULTS:\nYou\'ve answered $correctAnswers out of ${selectedAnswers.length} correctly!',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Color.fromARGB(255, 255, 255, 255),
-                fontSize: 20,
-                fontWeight: FontWeight.bold),
-          ),
-          ...renderedResults,
-          OutlinedButton(
-              onPressed: resetGame,
-              child: Text(
-                'Reset Quiz',
-                style: TextStyle(color: Colors.white),
-              ))
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'RESULTS:\nYou\'ve answered $correctAnswers out of ${selectedAnswers.length} correctly!',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+            ...renderedResults,
+            OutlinedButton(
+                onPressed: resetGame,
+                child: Text(
+                  'Reset Quiz',
+                  style: TextStyle(color: Colors.white),
+                ))
+          ],
+        ),
       ),
     );
   }
