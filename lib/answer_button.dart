@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 ButtonStyle buttonsStyle = ElevatedButton.styleFrom(
-  foregroundColor: Color.fromARGB(255, 255, 200, 50),
+  foregroundColor: Color(0xFFFFEB79),
   backgroundColor: Color.fromARGB(221, 0, 28, 77),
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(12),

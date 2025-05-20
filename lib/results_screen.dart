@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/models/quiz_question.dart';
 
-TextStyle question = TextStyle(color: Color(0xFFFFD900), fontSize: 16);
+TextStyle question = TextStyle(color: Color(0xFFFFEB79), fontSize: 16);
 TextStyle correct = TextStyle(color: Color.fromARGB(255, 138, 214, 255));
 TextStyle incorrect = TextStyle(color: Color.fromARGB(255, 255, 112, 99));
 

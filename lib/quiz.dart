@@ -56,7 +56,7 @@ class _QuizState extends State<Quiz> {
 
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 61, 24, 103),
+        backgroundColor: const Color.fromARGB(255, 37, 55, 126),
         body: screens[pageIndex],
       ),
     );

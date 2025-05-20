@@ -16,11 +16,11 @@ class StartScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset('assets/images/quiz-logo.png',
-              width: 300, color: const Color(0xDDFFD900)),
+              width: 300, ),
           spacer,
-          Text('Learn Flutter the fun way!',
+          Text('90s Kid Trivia Quiz',
               style:
-                  GoogleFonts.oxanium(color: Color(0xFFFFD900), fontSize: 24)),
+                  GoogleFonts.oxanium(color: Color(0xFFFFEB79), fontSize: 24)),
           spacer,
           OutlinedButton.icon(
               onPressed: buttonFunction,

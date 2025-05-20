@@ -51,7 +51,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             Text(
               currentQuestion.text,
               style: GoogleFonts.oxanium(
-                  color: Color(0xFFFFD900),
+                  color: Color(0xFFFFEB79),
                   fontSize: 18,
                   fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,

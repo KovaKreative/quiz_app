@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   build(context) {
     return MaterialApp(
-      home: Scaffold(
-          backgroundColor: const Color.fromARGB(255, 40, 32, 128),
-          body: Quiz()),
+      home: Quiz(),
     );
   }
 }
