@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quiz_app/questions_screen.dart';
 
 const spacer = SizedBox(height: 50);
 
 class StartScreen extends StatelessWidget {
   const StartScreen(this.buttonFunction, {super.key});
 
-  final void Function(Widget) buttonFunction;
+  final void Function() buttonFunction;
 
   @override
   Widget build(context) {
@@ -25,7 +24,7 @@ class StartScreen extends StatelessWidget {
             ),
             spacer,
             OutlinedButton.icon(
-                onPressed: () { buttonFunction(QuestionsScreen()); },
+                onPressed: buttonFunction,
                 style:
                     OutlinedButton.styleFrom(foregroundColor: Color(0xDDFFD900)),
                 icon: const Icon(Icons.arrow_right),
